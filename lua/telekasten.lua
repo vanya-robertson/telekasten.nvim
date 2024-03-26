@@ -2203,8 +2203,10 @@ local function FollowLink(opts)
                     if #pinfo.filepath > 0 then
                         local uuid = fileutils.new_uuid(uuid_type)
                         create_note_from_template(
-                            -- title,
-                            string.gsub(string.gsub(title ,"^%d+-", ""), "-", " "),
+--                            title,
+--                            this is for compatibility with different title formats
+--                            string.gsub(string.gsub(title , uuid .. "-", ""), "-", " "),
+                            string.gsub(string.gsub(title ,"-?%d%d%d%d+-?", ""), "-", " "),
                             uuid,
                             pinfo.filepath,
                             pinfo.template,
