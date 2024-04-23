@@ -1058,10 +1058,10 @@ end
 
 picker_actions.post_open = function()
     if M.Cfg.auto_set_filetype then
-        vim.cmd("set ft=telekasten")
+        vim.cmd("set ft=rmd")
     end
     if M.Cfg.auto_set_syntax then
-        vim.cmd("set syntax=telekasten")
+        vim.cmd("set syntax=rmd")
     end
 end
 
@@ -2970,7 +2970,7 @@ local function Setup(cfg)
                     .. M.Cfg.home
                     .. "/*"
                     .. M.Cfg.extension
-                    .. " set ft=telekasten"
+                    .. " set ft=rmd"
             )
         end
     end
