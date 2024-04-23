@@ -312,7 +312,7 @@ local function save_all_mod_buffers()
             and (
                 (
                     M.Cfg.auto_set_filetype == true
-                    and vim.fn.getbufvar(i, "&filetype") == "telekasten"
+                    and vim.fn.getbufvar(i, "&filetype") == "rmd"
                 ) or M.Cfg.auto_set_filetype == false
             )
         then
