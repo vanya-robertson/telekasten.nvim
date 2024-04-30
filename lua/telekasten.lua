@@ -1059,9 +1059,10 @@ end
 picker_actions.post_open = function()
     if M.Cfg.auto_set_filetype then
         vim.cmd("set ft=rmd")
+        vim.cmd("TSEnable highlight")
     end
     if M.Cfg.auto_set_syntax then
-        vim.cmd("set syntax=rmd")
+        vim.cmd("TSEnable highlight")
     end
 end
 
